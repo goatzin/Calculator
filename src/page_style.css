@@ -1,0 +1,64 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: #24243b;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    box-shadow: 5px 5px 10px black
+}
+
+.container > button {
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    background-color: #24243b;
+    color: #fff;
+}
+
+.container > button:hover {
+    background-color: #ff0077;
+}
+
+.span_two {
+    grid-column: span 2;    
+}
+
+.output {
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous_operand {
+    color: rgba(255, 0, 119, .75);
+    font-size: 1.5rem;
+}
+
+.output .current_operand {
+    color: #fff;
+    font-size: 2.5rem;
+}
